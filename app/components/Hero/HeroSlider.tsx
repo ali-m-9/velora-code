@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 import slides from "./slides";
+import StartCollaborationButton from "./StartCollaborationButton";
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -42,7 +43,6 @@ export default function HeroSlider() {
 
   return (
     <section className="w-full flex justify-center">
-
       <div
         className="
         relative
@@ -58,7 +58,6 @@ export default function HeroSlider() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-
         <Image
           src={slides[current].image}
           alt={slides[current].title}
@@ -74,6 +73,7 @@ export default function HeroSlider() {
 
         <div className="absolute inset-0 bg-black/45"></div>
 
+        {/* محتوای اسلاید */}
         <div
           className={`
           absolute
@@ -92,10 +92,14 @@ export default function HeroSlider() {
           <p className="text-gray-300 text-xl mt-5 leading-9">
             {slides[current].description}
           </p>
+
+          {/* دکمه شروع همکاری - پایین سمت چپ */}
+          <div className="mt-8 flex justify-end">
+            <StartCollaborationButton />
+          </div>
         </div>
 
-        {/* قبلی */}
-
+        {/* دکمه قبلی */}
         <button
           onClick={prevSlide}
           className="
@@ -117,11 +121,10 @@ export default function HeroSlider() {
           duration-300
           "
         >
-          <HiChevronLeft size={30} className="text-white"/>
+          <HiChevronLeft size={30} className="text-white" />
         </button>
 
-        {/* بعدی */}
-
+        {/* دکمه بعدی */}
         <button
           onClick={nextSlide}
           className="
@@ -143,11 +146,10 @@ export default function HeroSlider() {
           duration-300
           "
         >
-          <HiChevronRight size={30} className="text-white"/>
+          <HiChevronRight size={30} className="text-white" />
         </button>
 
         {/* نقطه‌ها */}
-
         <div
           className="
           absolute
@@ -158,9 +160,7 @@ export default function HeroSlider() {
           gap-3
           "
         >
-
           {slides.map((_, index) => (
-
             <button
               key={index}
               onClick={() => setCurrent(index)}
@@ -170,13 +170,9 @@ export default function HeroSlider() {
                   : "w-3 h-3 bg-white/40 hover:bg-white"
               }`}
             />
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
