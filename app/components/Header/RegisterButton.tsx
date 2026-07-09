@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import { UserPlus } from "lucide-react";
 export default function RegisterButton() {
   return (
     <Link
@@ -33,7 +33,10 @@ export default function RegisterButton() {
 
       <div className="absolute inset-0 rounded-md border border-white/20"></div>
 
-      <span className="relative z-10 tracking-wide">ثبت نام</span>
+      <span className="relative z-10 flex items-center gap-2 tracking-wide">
+  <UserPlus size={18} />
+  ثبت نام
+</span>
     </Link>
   );
 }

@@ -24,8 +24,21 @@ export default function RootLayout({
   className="h-full antialiased"
 >
       <body className={`${vazirmatn.className} min-h-full flex flex-col`}>
-        {children}
-      </body>
+
+  <div className="fixed inset-0 -z-10">
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={{
+      backgroundImage: "url('/images/background.png')",
+    }}
+  />
+
+  <div className="absolute inset-0 bg-[#050816]/60" />
+</div>
+
+  {children}
+
+</body>
     </html>
   );
 }
