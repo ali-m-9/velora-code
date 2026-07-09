@@ -20,8 +20,7 @@ export default function Navbar() {
     };
   }, []);
   return (
-    <header className="w-full flex justify-center pt-8 z-50">
-      <div
+<header className="sticky top-0 z-50 w-full flex justify-center pt-8 transition-all duration-500">      <div
   className={`
     w-[92%]
     max-w-[1450px]

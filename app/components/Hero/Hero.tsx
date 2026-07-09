@@ -3,8 +3,7 @@ import HeroSlider from "./HeroSlider";
 
 export default function Hero() {
   return (
-    <section className="max-w-[1500px] mx-auto px-12 pt-20 pb-8">
-
+<section className="max-w-[1500px] mx-auto px-12 pt-28 pb-8">
       <div className="flex items-center justify-between gap-16">
 
         {/* اسلایدر */}
