@@ -11,10 +11,9 @@ import { FaRegNewspaper } from "react-icons/fa6";
 
 const items = [
   { title: "خانه", icon: HiHome, active: true },
-  { title: "خدمات", icon: HiOutlineCog6Tooth },
+  { title: "آموزش", icon: HiOutlineCog6Tooth },
   { title: "درباره ما", icon: HiOutlineUser },
   { title: "تماس با ما", icon: HiOutlinePhone },
-  { title: "وبلاگ", icon: FaRegNewspaper },
 ];
 
 export default function Menu() {
