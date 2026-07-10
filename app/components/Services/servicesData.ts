@@ -28,7 +28,7 @@ export const services = [
     id: 3,
     title: "توسعه نرم‌افزار",
     description:
-      "طراحی و توسعه نرم‌افزارهای اختصاصی متناسب با نیاز کسب‌وکار شما.",
+      "توسعه نرم‌افزارهای اختصاصی متناسب با نیاز هر کسب‌وکار.",
     icon: Code2,
     href: "/services/software",
   },
@@ -36,23 +36,23 @@ export const services = [
     id: 4,
     title: "توسعه اپلیکیشن",
     description:
-      "طراحی اپلیکیشن‌های اندروید و iOS با رابط کاربری مدرن و سریع.",
+      "ساخت اپلیکیشن‌های اندروید و iOS با تکنولوژی‌های روز دنیا.",
     icon: Smartphone,
-    href: "/services/mobile-app",
+    href: "/services/mobile",
   },
   {
     id: 5,
     title: "آموزش برنامه‌نویسی",
     description:
-      "دوره‌های آموزشی پروژه‌محور برای ورود حرفه‌ای به بازار کار.",
+      "آموزش پروژه‌محور برنامه‌نویسی برای ورود حرفه‌ای به بازار کار.",
     icon: GraduationCap,
-    href: "/services/programming",
+    href: "/services/academy",
   },
   {
     id: 6,
     title: "پشتیبانی و مشاوره",
     description:
-      "پشتیبانی فنی، مشاوره تخصصی و همراهی در مسیر توسعه کسب‌وکار.",
+      "پشتیبانی تخصصی، رفع مشکلات و مشاوره فنی برای کسب‌وکارها.",
     icon: ShieldCheck,
     href: "/services/support",
   },

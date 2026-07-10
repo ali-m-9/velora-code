@@ -9,7 +9,7 @@ export default function Home() {
 
       <main className="min-h-screen flex flex-col gap-[350px]">
   <Hero />
-  <Services />
+  <Services/>
 </main>
     </>
   );
