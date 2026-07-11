@@ -39,9 +39,10 @@ export default function Services() {
 />
 <div className="relative z-10 mx-auto max-w-8xl px-8">
         {/* عنوان */}
-        <div className="mb-100 text-center">
+        <div className="mb-32 text-center">
+          
           <h2 className="text-5xl font-black text-white">
-            خدمات تخصصی{" "}
+            خدمات تخصصی{"     "}
             <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
               Velora Code
             </span>
@@ -49,7 +50,7 @@ export default function Services() {
 
           
         </div>
-
+<div className="h-30 bg-900/30"></div>
         {/* کارت‌ها */}
         <div
   className="
