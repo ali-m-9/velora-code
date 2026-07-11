@@ -20,6 +20,9 @@ export default function ServiceCard({
     <article
       className="
         group
+        flex
+        flex-col
+        h-full
         relative
         overflow-hidden
         rounded-3xl
@@ -27,12 +30,13 @@ export default function ServiceCard({
         border-white/10
         bg-white/[0.03]
         backdrop-blur-xl
-        p-12 min-h-[420px]p-10
+        p-12 
+        min-h-[220px] 
         transition-all
         duration-500
-        hover:-translate-y-4
+        hover:-translate-y-2
         hover:border-cyan-400/40
-        hover:shadow-[0_20px_70px_rgba(34,211,238,.25)]
+        hover:shadow-[0_25px_60px_rgba(34,211,238,.20)]
       "
     >
         {/* Glow */}
@@ -50,7 +54,59 @@ export default function ServiceCard({
     group-hover:opacity-100
   "
 />
-      {/* شماره */}
+     
+
+      {/* آیکون */}
+      <div
+        className="
+          mx-auto
+          mb-10
+          flex
+          h-20
+          w-20
+          items-center
+          justify-center
+          rounded-full
+          bg-gradient-to-br
+          from-cyan-500
+          to-violet-600
+          text-white
+          shadow-[0_0_35px_rgba(34,211,238,.35)]
+          transition-all
+          duration-500
+          group-hover:scale-110
+          group-hover:rotate-6
+        "
+      >
+        <Icon size={42} strokeWidth={2.2} />
+      </div>
+
+      {/* عنوان */}
+      <h3
+  className="
+    mt-0
+    text-center
+    text-3xl
+    font-extrabold
+    tracking-wide
+    text-white
+    transition-colors
+    duration-300
+    group-hover:text-cyan-300
+    leading-tight
+  "
+>
+        {title}
+      </h3>
+
+      {/* توضیحات */}
+      <p className="mt-6 text-center  max-w-[40ch] leading-8 text-zinc-400 group-hover:text-zinc-300 transition-colors duration-300 text-lg text-zinc-400">
+        {description}
+      </p>
+
+      {/* لینک */}
+      
+       {/* شماره */}
       <span
         className="
           absolute
@@ -60,77 +116,11 @@ export default function ServiceCard({
           font-black
           text-white/10
           select-none
+          pointer-events-none
         "
       >
         {String(index + 1).padStart(2, "0")}
       </span>
-
-      {/* آیکون */}
-      <div
-        className="
-          mx-auto
-          mb-8
-          flex
-          h-24
-          w-24
-          items-center
-          justify-center
-          rounded-2xl
-          bg-gradient-to-br
-          from-cyan-500
-          to-violet-600
-          text-white
-          shadow-[0_0_25px_rgba(34,211,238,.25)]
-          transition-all
-          duration-500
-          group-hover:scale-125
-          group-hover:rotate-12
-        "
-      >
-        <Icon size={50} />
-      </div>
-
-      {/* عنوان */}
-      <h3
-  className="
-    mt-3
-    text-center
-    text-3xl
-    font-extrabold
-    tracking-wide
-    text-white
-    transition-colors
-    duration-300
-    group-hover:text-cyan-300
-  "
->
-        {title}
-      </h3>
-
-      {/* توضیحات */}
-      <p className="mt-5 text-center leading-9 text-zinc-400 group-hover:text-zinc-300 transition-colors duration-300 text-lg text-zinc-400">
-        {description}
-      </p>
-
-      {/* لینک */}
-      <div className="mt-8 flex justify-center">
-        <Link
-          href={href}
-          className="
-            inline-flex
-            items-center
-            gap-2
-            font-semibold
-            text-cyan-400 hover:text-white
-            transition-all
-            duration-300
-            group-hover:gap-5 group-hover:translate-x-1
-          "
-        >
-          اطلاعات بیشتر
-          <ArrowLeft size={18} />
-        </Link>
-      </div>
     </article>
   );
 }

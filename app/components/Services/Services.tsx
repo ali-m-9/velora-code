@@ -37,10 +37,9 @@ export default function Services() {
     blur-3xl
   "
 />
-      <div className="relative z-10 mx-auto max-w-7xl px-8">
-
+<div className="relative z-10 mx-auto max-w-8xl px-8">
         {/* عنوان */}
-        <div className="mb-20 text-center">
+        <div className="mb-100 text-center">
           <h2 className="text-5xl font-black text-white">
             خدمات تخصصی{" "}
             <span className="bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
@@ -52,7 +51,16 @@ export default function Services() {
         </div>
 
         {/* کارت‌ها */}
-        <div className="grid gap-15 md:grid-cols-2 xl:grid-cols-3">
+        <div
+  className="
+    grid
+    gap-10
+    md:grid-cols-2
+    xl:grid-cols-3
+    items-stretch
+    justify-items-center
+  "
+>
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}

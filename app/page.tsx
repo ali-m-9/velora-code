@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
 
-      <main className="min-h-screen flex flex-col gap-[350px]">
+      <main className="min-h-screen flex flex-col gap-[300px]">
   <Hero />
   <Services/>
 </main>
