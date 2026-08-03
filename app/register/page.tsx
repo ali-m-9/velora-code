@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { useRouter } from "next/navigation";
+
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -11,18 +13,28 @@ export default function LoginPage() {
     remember: false,
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
+  const router = useRouter();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("اطلاعات ورود:", formData);
-  };
+const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const { name, value, type, checked } = e.target;
+
+  setFormData((prev) => ({
+    ...prev,
+    [name]: type === "checkbox" ? checked : value,
+  }));
+};
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  alert("handleSubmit اجرا شد");
+  console.log("اطلاعات ورود:", formData);
+
+  router.push(
+    `/verify-email?email=${encodeURIComponent(formData.email)}`
+  );
+};
+
 
   return (
     <main
