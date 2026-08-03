@@ -59,7 +59,7 @@ export default function Services() {
       font-black
       uppercase
       tracking-[16px]
-      text-white/[0.03]
+      text-white/[0.05]
       pointer-events-none
     "
   >

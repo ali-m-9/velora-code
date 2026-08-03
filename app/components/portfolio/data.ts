@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    id: 1,
+    title: "فروشگاه اینترنتی مدرن",
+    category: "طراحی و توسعه وب",
+    image: "/images/portfolio/shop.jpg",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    year: "2026",
+    status: "تکمیل شده",
+  },
+  {
+    id: 2,
+    title: "داشبورد مدیریت",
+    category: "پنل مدیریت",
+    image: "/images/portfolio/dashboard.jpg",
+    technologies: ["Next.js", "TypeScript", "Chart.js"],
+    year: "2026",
+    status: "تکمیل شده",
+  },
+  {
+    id: 3,
+    title: "وب‌سایت شرکتی",
+    category: "طراحی رابط کاربری",
+    image: "/images/portfolio/company.jpg",
+    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    year: "2026",
+    status: "تکمیل شده",
+  },
+  {
+    id: 4,
+    title: "پلتفرم آموزشی",
+    category: "آموزش آنلاین",
+    image: "/images/portfolio/education.jpg",
+    technologies: ["Next.js", "React", "Tailwind CSS"],
+    year: "2026",
+    status: "تکمیل شده",
+  },
+];

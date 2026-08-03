@@ -1,6 +1,7 @@
 import Navbar from "./components/Header/Navbar";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services";
+import Portfolio from "./components/portfolio/Portfolio";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
       <main className="min-h-screen flex flex-col gap-[300px]">
   <Hero />
   <Services/>
+  <Portfolio />
+  
 </main>
     </>
   );
